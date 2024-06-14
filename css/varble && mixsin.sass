@@ -1,0 +1,40 @@
+$tablet-width-Mobile: 375px
+$desktop-width-Desktop: 1440px
+/*  Colors */
+$Soft-Blue: hsl(231, 69%, 60%)
+$Soft-Red: hsl(0, 94%, 66%)
+$Grayish-Blue: hsl(229, 8%, 60%)
+$Very-Dark-Blue: hsl(229, 31%, 21%)
+$font-family: "Rubik"
+
+
+
+@mixin for-phone-only
+  @media (max-width : $tablet-width-Mobile ) 
+     @content 
+
+@mixin for-desktop-up 
+  @media (min-width : $tablet-width-Mobile  ) 
+     @content
+
+
+@mixin button($color)
+  background-color: $color
+  color: white
+  border-radius: 4px
+  padding: 9px 23px
+  border: 2px solid transparent
+  cursor: pointer
+@mixin button-hover($color)
+  background-color: white
+  color: $color
+  border: 2px solid $color
+  box-shadow: 4px 6px 5px -1px #a9a9a9
+  transition: 0.5s
+ul
+  list-style: none
+a
+  text-decoration: none
+  color: $Very-Dark-Blue
+  opacity: 0.7
+
